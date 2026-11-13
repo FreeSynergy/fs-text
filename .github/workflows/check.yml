@@ -1,0 +1,19 @@
+# Placeholder: this repository has no code yet. When code arrives, replace the job with the shared one:
+#   uses: FreeSynergy/fs-release/.github/workflows/check.yml@main
+name: check
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Licenses and docs are present
+        run: test -f LICENSE-MIT && test -f LICENSE-APACHE && test -f README.md && test -f DESIGN.md
